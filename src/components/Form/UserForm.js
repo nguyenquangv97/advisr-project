@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Form, Button } from 'react-bootstrap';
+import Alert from 'react-bootstrap/Alert';
 import classes from './form.module.css';
 import * as actions from '../../store/actions/index';
 class UserForm extends Component {
@@ -13,6 +14,11 @@ class UserForm extends Component {
 		qtyPerOneBag: '',
 		costPerOneBag: '',
 	};
+
+	componentDidMount() {
+		this.props.onStartSubmitData()
+	}
+	
 
 	costNameChangedHandler = (event) => {
 		this.setState({ costName: event.target.value });
@@ -61,6 +67,7 @@ class UserForm extends Component {
 				userId: this.props.userId,
 			};
 			this.props.onSubmitData(toSubmit, this.props.token);
+			this.props.onSubmitDataSuccess()
 		}
 	};
 
@@ -119,16 +126,17 @@ class UserForm extends Component {
 
 				<Form.Group className={classes.margin} controlId='costPerOneBag'>
 					<Form.Label>Cost per 1 Bag</Form.Label>
-					<Form.Control
-						disabled
-						type='text'
-						value={this.state.costPerOneBag}
-					/>
+					<Form.Control disabled type='text' value={this.state.costPerOneBag} />
 				</Form.Group>
 
 				<Button variant='primary' type='submit' style={{ marginBottom: '2%' }}>
 					Submit
 				</Button>
+				{this.props.finished
+					? <Alert variant='success'> Successfully submited</Alert> 
+					: null
+				}
+
 			</Form>
 		);
 	}
@@ -138,12 +146,15 @@ const mapStateToProps = (state) => {
 		isAuthenticated: state.auth.token !== null,
 		token: state.auth.token,
 		userId: state.auth.userId,
+		finished: state.data.finished
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onSubmitData: (data, token) => dispatch(actions.submitData(data, token)),
+		onSubmitDataSuccess: () => dispatch(actions.submitDataSuccess()),
+		onStartSubmitData: () => dispatch(actions.startSubmitData())
 	};
 };
 

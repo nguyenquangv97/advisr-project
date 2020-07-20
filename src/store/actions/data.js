@@ -7,6 +7,18 @@ export const submitData = (data, token) => {
 	};
 };
 
+export const submitDataSuccess = () => {
+	return {
+		type: actionTypes.SUBMIT_DATA_SUCCESS
+	}
+}
+
+export const startSubmitData = () => {
+	return {
+		type: actionTypes.START_SUBMIT_DATA
+	}
+}
+
 export const fetchDataSuccess = (data) => {
 	return {
 		type: actionTypes.FETCH_DATA_SUCCESS,
