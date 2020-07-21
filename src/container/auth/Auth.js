@@ -70,6 +70,7 @@ class Auth extends Component {
 					<Form.Group className={classes.margin} controlId='formBasicEmail'>
 						<Form.Label>Email address</Form.Label>
 						<Form.Control
+							required
 							type='email'
 							placeholder='Enter email'
 							onChange={this.emailChangedHander}
@@ -80,6 +81,7 @@ class Auth extends Component {
 					<Form.Group className={classes.margin} controlId='formBasicPassword'>
 						<Form.Label>Password</Form.Label>
 						<Form.Control
+							required
 							type='password'
 							placeholder='Password'
 							onChange={this.passwordChangedHandler}

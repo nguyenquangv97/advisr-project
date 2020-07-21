@@ -77,6 +77,7 @@ class UserForm extends Component {
 				<Form.Group className={classes.margin} controlId='costName'>
 					<Form.Label>Cost name</Form.Label>
 					<Form.Control
+						required
 						type='text'
 						placeholder='Enter cost name'
 						value={this.state.costName}
@@ -87,6 +88,7 @@ class UserForm extends Component {
 				<Form.Group className={classes.margin} controlId='supplier'>
 					<Form.Label>Supplier</Form.Label>
 					<Form.Control
+						required
 						type='text'
 						placeholder='Enter supplier'
 						value={this.state.supplier}
@@ -97,6 +99,7 @@ class UserForm extends Component {
 				<Form.Group className={classes.margin} controlId='baseCostUnit'>
 					<Form.Label>Base cost unit</Form.Label>
 					<Form.Control
+						required
 						type='text'
 						placeholder='Enter base cost unit'
 						value={this.state.baseCostUnit}
@@ -107,6 +110,7 @@ class UserForm extends Component {
 				<Form.Group className={classes.margin} controlId='UnitPrice'>
 					<Form.Label>Unit price {this.state.productName}</Form.Label>
 					<Form.Control
+						required
 						type='text'
 						placeholder='Enter unit price'
 						value={this.state.unitPrice}
@@ -117,6 +121,7 @@ class UserForm extends Component {
 				<Form.Group className={classes.margin} controlId='qtyPerOneBag'>
 					<Form.Label>Quantity per 1 Bag</Form.Label>
 					<Form.Control
+						required
 						type='text'
 						placeholder='Enter cost per one bag'
 						value={this.state.qtyPerOneBag}

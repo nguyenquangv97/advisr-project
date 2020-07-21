@@ -19,7 +19,7 @@ class App extends Component {
 			<Switch>
 				<Route path='/auth' component={Auth} />
 				<Route path='/data' component={DataTable} />
-				<Route path='/' exact component={Main} />
+				<Route path='/' exact component={Auth} />
 				<Redirect to='/' />
 			</Switch>
 		);
