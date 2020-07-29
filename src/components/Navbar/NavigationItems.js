@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import { withRouter } from 'react-router-dom';
 import classes from './navigationItems.module.css';
 
-class navigationItem extends Component {
+class NavigationItem extends Component {
 	render() {
 		return (
 			<Nav
@@ -23,6 +23,9 @@ class navigationItem extends Component {
 							break;
 						case 'data':
 							this.props.history.push('/data');
+							break;
+						case 'software':
+							this.props.history.push('/software');
 							break;
 						default:
 							this.props.history.push('/');
@@ -44,6 +47,9 @@ class navigationItem extends Component {
 				<Nav.Item>
 					<Nav.Link eventKey='data'>View data</Nav.Link>
 				</Nav.Item>
+				<Nav.Item>
+					<Nav.Link eventKey='software'>Software</Nav.Link>
+				</Nav.Item>
 			</Nav>
 		);
 	}
@@ -55,4 +61,4 @@ const mapStateToProps = (state) => {
 	};
 };
 
-export default withRouter(connect(mapStateToProps)(navigationItem));
+export default withRouter(connect(mapStateToProps)(NavigationItem));

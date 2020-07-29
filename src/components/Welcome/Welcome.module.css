@@ -1,0 +1,156 @@
+
+* {
+    color: white;
+}
+
+/* ----- Headings ----- */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    word-spacing: 4px;
+}
+
+h2 {
+    font-size: 180%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #3b6978;
+    content: "";
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    letter-spacing: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+
+.welcomeHeader {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1507831228884-93d43e81a99d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=932&q=80");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.mainNav {
+    float: right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.mainNav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.mainNav li a:link,
+.mainNav li a:visited {
+    padding: 8px 0;
+    color: #e4e3e3;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+
+}
+
+.mainNav li a:hover,
+.mainNav li a:active {
+    border-bottom: 2px solid #84a9ac;
+}
+
+.heroTextBox {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* translate the element half of its width and half of its height up and to the left  */
+}
+
+/* ----- Buttons ----- */
+.btn {
+    font-size: 0.9em;
+    margin-left: 10px;
+}
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btnFull:link,
+.btnFull:visited {
+    background-color: #3b6978;
+    border: 1px solid #3b6978;
+    color: #e4e3e3;
+    margin-right: 15px;
+}
+
+.btnGhost:link,
+.btnGhost:visited {
+    border: 1px solid #3b6978;
+    color: #3b6978
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #204051;
+}
+
+.btnFull:hover,
+.btnFull:active {
+    border: 1px solid #204051;
+
+}
+
+.btnGhost:hover,
+.btnGhost:active {
+    border: 1px solid #204051;
+    color: #e4e3e3;
+}

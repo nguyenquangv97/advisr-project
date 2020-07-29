@@ -7,6 +7,8 @@ import Main from './container/Main/Main';
 import Auth from './container/auth/Auth';
 import Logout from './container/auth/Logout/Logout';
 import DataTable from './components/Table/DataTable';
+import Software from './components/Software/Software';
+import Welcome from './container/Welcome';
 import './App.css';
 
 class App extends Component {
@@ -18,8 +20,8 @@ class App extends Component {
 		let routes = (
 			<Switch>
 				<Route path='/auth' component={Auth} />
-				<Route path='/data' component={DataTable} />
-				<Route path='/' exact component={Auth} />
+				<Route path='/software' component={Auth} />
+				<Route path='/' exact component={Welcome} />
 				<Redirect to='/' />
 			</Switch>
 		);
@@ -29,7 +31,8 @@ class App extends Component {
 					<Route path='/logout' component={Logout} />
 					<Route path='/auth' component={Auth} />
 					<Route path='/data' component={DataTable} />
-					<Route path='/' exact component={Main} />
+					<Route path='/software' component={Software} />
+					<Route path='/' exact component={Welcome} />
 					<Redirect to='/' />
 				</Switch>
 			);
@@ -40,7 +43,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
 	return {
 		isAuthenticated: state.auth.token !== null,
-		token: state.auth.token
+		token: state.auth.token,
 	};
 };
 

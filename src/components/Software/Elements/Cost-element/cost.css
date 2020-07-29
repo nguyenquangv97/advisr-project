@@ -1,0 +1,12 @@
+/* #tr {
+    background-color: #123;
+  }
+
+#tbody {
+    background-color: red;
+} */
+
+.table thead {
+  text-align: center;
+}
+
