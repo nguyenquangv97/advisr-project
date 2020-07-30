@@ -31,7 +31,7 @@ class App extends Component {
 					<Route path='/logout' component={Logout} />
 					<Route path='/auth' component={Auth} />
 					<Route path='/data' component={DataTable} />
-					<Route path='/software' component={Software} />
+					<Route path='/software' component={Main} />
 					<Route path='/' exact component={Welcome} />
 					<Redirect to='/' />
 				</Switch>
